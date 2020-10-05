@@ -2,18 +2,23 @@
   <div class="app">
     <div class="naisou">
       <img
-        src="https://www.a-1group.net/wp/wp-content/uploads/2019/01/5-6_R-2-1024x683.jpg"
+        src="../assets/img/naisou.png"
         title="内装"
         width="100%"
-        height="650"
+        height="670px"
       />
+      <section>
+        <p>ID創社では、什器製造業から内装工事全般、</p>
+        <p>
+          お客様の満足向上を深く追求し、低価格かつ高品質なサービスの提供を心がけております。
+        </p>
+      </section>
     </div>
-    <main>
-      <p>国武工芸株式会社では、什器製造業から内装工事全般、</p>
-      <p>
-        お客様の満足向上を深く追求し、低価格かつ高品質なサービスの提供を心がけております。
-      </p>
-    </main>
+    <div>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -23,11 +28,14 @@ export default {};
 
 <style scoped>
 .app {
+  text-align: center;
+}
+.naisou {
   position: relative;
 }
-.app main {
+section {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -36,9 +44,6 @@ export default {};
   padding: 0;
 }
 
-.naisou {
-  text-align: center;
-}
 p {
   text-align: center;
 }
