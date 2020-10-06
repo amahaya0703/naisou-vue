@@ -14,71 +14,74 @@
         </p>
       </section>
     </div>
-    <article>
+    <div>
       <h2>施工実績</h2>
-      <h3>RESTAURANT</h3>
-      <table border="4">
-        <tr>
-          <td>レストラン</td>
-          <td bgcolor="#FFFFFF" valign="top" width="150">
-            大阪・梅田
-          </td>
-          <td bgcolor="#FFFFFF" valign="top" width="200">
-            にくらうす
-          </td>
-        </tr>
-        <tr>
-          <td>鮨</td>
-          <td bgcolor="#FFFFFF" valign="top" width="150">
-            東京・渋谷
-          </td>
-          <td bgcolor="#FFFFFF" valign="top" width="200">
-            Heiju TOKYO
-          </td>
-        </tr>
-        <tr>
-          <td>レストラン</td>
-          <td bgcolor="#FFFFFF" valign="top" width="150">
-            神奈川・横浜
-          </td>
-          <td bgcolor="#FFFFFF" valign="top" width="200">
-            梅田エスト店
-          </td>
-        </tr>
-        <tr>
-          <td>レストラン</td>
-          <td bgcolor="#FFFFFF" valign="top" width="150">
-            東京・渋谷
-          </td>
-          <td bgcolor="#FFFFFF" valign="top" width="200">
-            銀座一颯
-          </td>
-        </tr>
-        <tr>
-          <td>スーパー</td>
-          <td bgcolor="#FFFFFF" valign="top" width="150">
-            大阪・関蘭
-          </td>
-          <td bgcolor="#FFFFFF" valign="top" width="200">
-            福島屋
-          </td>
-        </tr>
+      <ul>
+        <li>
+          restaurant
+        </li>
+        <hr />
+        <li>
+          apparel
+        </li>
+        <hr />
+        <li>
+          Other
+        </li>
+        <hr />
+      </ul>
+    </div>
+    <div>
+      <h2>会社概要</h2>
+      <br />
+      <table>
+        <tbody>
+          <tr>
+            <th>社名</th>
+            <td>株式会社ID創社</td>
+          </tr>
+          <tr>
+            <th>本社</th>
+            <td>
+              東京都●●区●●町
+              <br />
+              TEL 090-000-000 FAX 090-000-000
+            </td>
+          </tr>
+          <tr>
+            <th>創業</th>
+            <td>1962年</td>
+          </tr>
+          <tr>
+            <th>資本金</th>
+            <td>●●●万円</td>
+          </tr>
+          <tr>
+            <th>代表取締役</th>
+            <td>天早貴義</td>
+          </tr>
+          <tr>
+            <th>建設業者登録</th>
+            <td>東京都知事登録（は）第0000号</td>
+          </tr>
+          <tr>
+            <th>建設業者許可</th>
+            <td>国土交通大臣 許可 第0000号</td>
+          </tr>
+          <tr>
+            <th>営業種目</th>
+            <td>
+              1.商業、一級建築工事
+              <br />
+              2.上記の設計、デザイン
+              <br />
+              3.別注家具・造作木工事
+            </td>
+          </tr>
+          <br />
+        </tbody>
       </table>
-    </article>
-    <br />
-    <h2>会社概要</h2>
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+    </div>
   </div>
 </template>
 
@@ -123,11 +126,20 @@ h2 {
   align-items: center;
 }
 table {
+  border-collapse: collapse;
   margin: 0 auto;
   width: 800px;
 }
-td {
-  text-align: center;
-  width: 300px;
+table td {
+  padding: 10px;
+}
+.tenpo {
+  margin: 40px 0 15px 0;
+}
+ul {
+  padding: 0;
+}
+hr {
+  width: 250px;
 }
 </style>

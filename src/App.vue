@@ -11,6 +11,17 @@
       </ul>
     </nav>
     <router-view></router-view>
+    <footer>
+      <div class="foot">
+        <ul>
+          <li>ama</li>
+          <li>habu</li>
+          <li>habubu</li>
+          <li>amahaya</li>
+        </ul>
+        <p>Copyright © TANSEISHA Co., Ltd. All Rights Reserved.</p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -23,8 +34,12 @@ export default {
 
 <style scoped>
 ul {
-  padding: 0;
-  height: 75px;
+  padding: 0 10px;
+  display: flex;
+  list-style: none;
+}
+li {
+  margin: 0 auto;
 }
 .ama {
   display: table;
@@ -44,5 +59,17 @@ ul {
   font-size: 30px;
   text-align: center;
   color: pink;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background: #3d3b3d;
+}
+
+.foot {
+  margin: 0 auto;
+  padding: 20px 0 10px 0;
 }
 </style>
