@@ -7,27 +7,33 @@
         width="100%"
         height="700px"
       />
-      <section>
+      <span>
         <p>ID創社では、什器製造業から内装工事全般、</p>
         <p>
           お客様の満足向上を深く追求し、低価格かつ高品質なサービスの提供を心がけております。
         </p>
-      </section>
+      </span>
     </div>
     <div>
       <h2>施工実績</h2>
       <ul>
-        <li>
-          restaurant
-        </li>
+        <router-link
+          to="/restaurant"
+          tag="div"
+          style="cursor: hand; cursor:pointer;"
+          >restaurant</router-link
+        >
         <hr />
-        <li>
-          apparel
-        </li>
+        <router-link
+          to="/apparel"
+          tag="div"
+          style="cursor: hand; cursor:pointer;"
+          >apparel</router-link
+        >
         <hr />
-        <li>
-          Other
-        </li>
+        <router-link to="/other" tag="div" style="cursor: hand; cursor:pointer;"
+          >other</router-link
+        >
         <hr />
       </ul>
     </div>
@@ -82,6 +88,33 @@
         </tbody>
       </table>
     </div>
+    <div>
+      <h2>アクセス</h2>
+      <br />
+      <br />
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -97,7 +130,7 @@ export default {};
   position: relative;
   height: 700px;
 }
-section {
+span {
   position: absolute;
   bottom: -78px;
   left: 50%;
@@ -138,6 +171,7 @@ table td {
 }
 ul {
   padding: 0;
+  margin: 50px 0;
 }
 hr {
   width: 250px;

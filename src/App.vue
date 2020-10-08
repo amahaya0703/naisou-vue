@@ -1,13 +1,28 @@
 <template>
   <div id="app">
     <nav class="ama">
-      <router-link to="/" tag="p">ID創社</router-link>
+      <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+        >●●創社</router-link
+      >
       <ul class="menu">
-        <router-link to="/kaisya" tag="p">会社概要</router-link>
-        <router-link to="/" tag="p">施工実績</router-link>
-        <router-link to="/" tag="p">採用</router-link>
-        <router-link to="/" tag="p">ログイン/登録</router-link>
-        <router-link to="/" tag="p">ログアウト</router-link>
+        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+          >会社概要</router-link
+        >
+        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+          >施工実績</router-link
+        >
+        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+          >アクセス</router-link
+        >
+        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+          >お問合せ</router-link
+        >
+        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+          >ログイン/登録</router-link
+        >
+        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+          >ログアウト</router-link
+        >
       </ul>
     </nav>
     <router-view></router-view>
@@ -15,11 +30,11 @@
       <div class="foot">
         <ul>
           <li>ama</li>
-          <li>habu</li>
-          <li>habubu</li>
+          <li>test</li>
+          <li>test</li>
           <li>amahaya</li>
         </ul>
-        <p>Copyright © TANSEISHA Co., Ltd. All Rights Reserved.</p>
+        <p>Copyright © ●●SHA Co., Ltd. All Rights Reserved.</p>
       </div>
     </footer>
   </div>
@@ -56,13 +71,12 @@ li {
 #app {
   font-family: "M PLUS Rounded 1c";
   -webkit-font-smoothing: antialiased;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   color: pink;
 }
 
 footer {
-  position: relative;
   z-index: 1;
   color: #fff;
   background: #3d3b3d;
