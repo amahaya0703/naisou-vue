@@ -8,7 +8,7 @@
         height="700px"
       />
       <span>
-        <p>ID創社では、什器製造業から内装工事全般、</p>
+        <p>●●創社では、什器製造業から内装工事全般、</p>
         <p>
           お客様の満足向上を深く追求し、低価格かつ高品質なサービスの提供を心がけております。
         </p>
@@ -18,20 +18,23 @@
       <h2>施工実績</h2>
       <ul>
         <router-link
-          to="/restaurant"
+          :to="{ name: 'res' }"
           tag="div"
-          style="cursor: hand; cursor:pointer;"
+          style="cursor: hand; cursor: pointer"
           >restaurant</router-link
         >
         <hr />
         <router-link
-          to="/apparel"
+          :to="{ name: 'apa' }"
           tag="div"
-          style="cursor: hand; cursor:pointer;"
+          style="cursor: hand; cursor: pointer"
           >apparel</router-link
         >
         <hr />
-        <router-link to="/other" tag="div" style="cursor: hand; cursor:pointer;"
+        <router-link
+          :to="{ name: 'other' }"
+          tag="div"
+          style="cursor: hand; cursor: pointer"
           >other</router-link
         >
         <hr />
@@ -39,12 +42,11 @@
     </div>
     <div>
       <h2>会社概要</h2>
-      <br />
       <table>
         <tbody>
           <tr>
             <th>社名</th>
-            <td>株式会社ID創社</td>
+            <td>株式会社●●創社</td>
           </tr>
           <tr>
             <th>本社</th>
@@ -90,36 +92,69 @@
     </div>
     <div>
       <h2>アクセス</h2>
-      <br />
-      <br />
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <div class="access">
+        <img
+          class="img"
+          src="../assets/img/kaisya.png"
+          title="会社"
+          height="600px"
+          width="1000px"
+        />
+        <div class="map">
+          <div class="text">
+            <h3>TOKYO OFFICE</h3>
+            <p>
+              〒000-000
+              <br />
+              東京都〇〇区〇〇町
+              <br />
+              TEL 000-0000
+              <br />
+              FAX 000-000
+            </p>
+            <button>googl map</button>
+          </div>
+          <GmapMap
+            :center="center"
+            :zoom="zoom"
+            ref="map"
+            style="height: 400px; width: 100%; margin: 0 0 0 50px"
+            @center_changed="onCenterCanged"
+          >
+            <GmapMarker
+              v-show="marker_center"
+              :position="marker_center"
+              :clickable="true"
+              :icon="icon_center"
+              :draggable="true"
+            ></GmapMarker>
+          </GmapMap>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      center: { lat: 35.71, lng: 139.72 },
+      zoom: 10,
+      icon_center: {
+        url: require("@/assets/img/icon.png"),
+        size: { width: 100, height: 70, f: "px", b: "px" },
+        scaledSize: { width: 40, height: 35, f: "px", b: "px" },
+      },
+      marker_center: { lat: 35.71, lng: 139.72 },
+    };
+  },
+  methods: {
+    onCenterCanged(center) {
+      this.marker_center = { lat: center.lat(), lng: center.lng() };
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -160,7 +195,7 @@ h2 {
 }
 table {
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 70px auto;
   width: 800px;
 }
 table td {
@@ -175,5 +210,21 @@ ul {
 }
 hr {
   width: 250px;
+}
+.map {
+  height: 400px;
+  margin: 30px 220px 30px 0;
+  display: flex;
+}
+.img {
+  margin: 30px 0 0 0;
+}
+.text {
+  margin: 0 0 0 400px;
+  padding-top: 30px;
+  width: 500px;
+}
+.text h3 {
+  margin: 0 0 50px 0;
 }
 </style>
