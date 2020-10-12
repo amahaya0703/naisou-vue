@@ -1,26 +1,26 @@
 <template>
   <div id="app">
     <nav class="ama">
-      <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+      <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
         >●●創社</router-link
       >
       <ul class="menu">
-        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
-          >会社概要</router-link
-        >
-        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
           >施工実績</router-link
         >
-        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
+          >会社概要</router-link
+        >
+        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
           >アクセス</router-link
         >
-        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
           >お問合せ</router-link
         >
-        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
           >ログイン/登録</router-link
         >
-        <router-link to="/" tag="p" style="cursor: hand; cursor:pointer;"
+        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
           >ログアウト</router-link
         >
       </ul>
@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+nav {
+  background-color: #3d3b3d;
+}
 ul {
   padding: 0 10px;
   display: flex;
@@ -59,7 +62,6 @@ li {
 .ama {
   display: table;
   width: 100%;
-  margin: 15px 0 15px 0;
 }
 .menu {
   list-style-type: none;
