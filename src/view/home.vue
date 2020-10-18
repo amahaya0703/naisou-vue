@@ -167,7 +167,7 @@ export default {
 }
 span {
   position: absolute;
-  bottom: -78px;
+  bottom: 12px;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);

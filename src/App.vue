@@ -14,7 +14,10 @@
         <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
           >アクセス</router-link
         >
-        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
+        <router-link
+          :to="{ name: 'contact' }"
+          tag="p"
+          style="cursor: hand; cursor: pointer"
           >お問合せ</router-link
         >
         <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
@@ -73,7 +76,6 @@ li {
 #app {
   font-family: "M PLUS Rounded 1c";
   -webkit-font-smoothing: antialiased;
-  font-size: 20px;
   text-align: center;
   color: pink;
 }
