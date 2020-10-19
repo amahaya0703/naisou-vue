@@ -2,9 +2,12 @@
   <div id="app">
     <nav class="ama">
       <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
-        >●●創社</router-link
+        >〇〇創社</router-link
       >
       <ul class="menu">
+        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
+          >施工内容</router-link
+        >
         <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
           >施工実績</router-link
         >
@@ -19,12 +22,6 @@
           tag="p"
           style="cursor: hand; cursor: pointer"
           >お問合せ</router-link
-        >
-        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
-          >ログイン/登録</router-link
-        >
-        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
-          >ログアウト</router-link
         >
       </ul>
     </nav>
