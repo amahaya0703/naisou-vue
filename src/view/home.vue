@@ -14,124 +14,198 @@
         </p>
       </span>
     </div>
-    <div>
-      <h2>施工実績</h2>
-      <ul>
-        <router-link
-          :to="{ name: 'res' }"
-          tag="div"
-          style="cursor: hand; cursor: pointer"
-          >restaurant</router-link
-        >
-        <hr />
-        <router-link
-          :to="{ name: 'apa' }"
-          tag="div"
-          style="cursor: hand; cursor: pointer"
-          >apparel</router-link
-        >
-        <hr />
-        <router-link
-          :to="{ name: 'other' }"
-          tag="div"
-          style="cursor: hand; cursor: pointer"
-          >other</router-link
-        >
-        <hr />
-      </ul>
-    </div>
-    <div>
-      <h2>会社概要</h2>
-      <table>
-        <tbody>
-          <tr>
-            <th>社名</th>
-            <td>株式会社●●創社</td>
-          </tr>
-          <tr>
-            <th>本社</th>
-            <td>
-              東京都●●区●●町
-              <br />
-              TEL 090-000-000 FAX 090-000-000
-            </td>
-          </tr>
-          <tr>
-            <th>創業</th>
-            <td>1962年</td>
-          </tr>
-          <tr>
-            <th>資本金</th>
-            <td>●●●万円</td>
-          </tr>
-          <tr>
-            <th>代表取締役</th>
-            <td>天早貴義</td>
-          </tr>
-          <tr>
-            <th>建設業者登録</th>
-            <td>東京都知事登録（は）第0000号</td>
-          </tr>
-          <tr>
-            <th>建設業者許可</th>
-            <td>国土交通大臣 許可 第0000号</td>
-          </tr>
-          <tr>
-            <th>営業種目</th>
-            <td>
-              1.商業、一級建築工事
-              <br />
-              2.上記の設計、デザイン
-              <br />
-              3.別注家具・造作木工事
-            </td>
-          </tr>
-          <br />
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <h2>アクセス</h2>
-      <div class="access">
-        <img
-          class="img"
-          src="../assets/img/kaisya.png"
-          title="会社"
-          height="600px"
-          width="1000px"
-        />
-        <div class="map">
-          <div class="text">
-            <h3>TOKYO OFFICE</h3>
-            <p>
-              〒000-000
-              <br />
-              東京都〇〇区〇〇町
-              <br />
-              TEL 000-0000
-              <br />
-              FAX 000-000
-            </p>
-            <button>googl map</button>
+    <section>
+      <div class="naiyou">
+        <h2>施工内容</h2>
+        <div class="naiyou-inner">
+          <div class="naiyou-tenpo">
+            <img
+              src="../assets/img/tenpo-sekou.png"
+              alt="店舗施工"
+              width="720px"
+              height="436px"
+            />
           </div>
-          <GmapMap
-            :center="center"
-            :zoom="zoom"
-            ref="map"
-            style="height: 400px; width: 100%; margin: 0 0 0 50px"
-            @center_changed="onCenterCanged"
-          >
-            <GmapMarker
-              v-show="marker_center"
-              :position="marker_center"
-              :clickable="true"
-              :icon="icon_center"
-              :draggable="true"
-            ></GmapMarker>
-          </GmapMap>
+          <div class="naiyou-text">
+            <div class="naiyoutext-inner">
+              <div class="naiyou-font">
+                <font>あらゆる店舗内装工事に対応</font>
+              </div>
+              <h3>店舗内装工事</h3>
+              <div class="naiyou-text">
+                ●●創社はあらゆる業種の店舗内装施工、設計を、臨機応変にお請けできるのが強みです。店舗のリニューアルや業態の変更、部分的な改修や補修など、なんでもお任せください。お客様の多種多様なご期待に沿えるよう、全力で対応いたします。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="naiyou-inner">
+          <div class="naiyou-text">
+            <div class="naiyoutext-inner">
+              <div class="naiyou-font">
+                <font>あらゆる店舗内装工事に対応</font>
+              </div>
+              <h3>商業施設施工工事</h3>
+              <div class="naiyou-text">
+                ●●創社はあらゆる業種の商業施設施の施工、設計を、臨機応変にお請けでき、商業施設のリニューアルや業態の変更、部分的な改修や補修など、なんでもお任せください。お客様の多種多様なご期待に沿えるよう、全力で対応いたします。
+              </div>
+            </div>
+          </div>
+          <div class="naiyou-tenpo">
+            <img
+              src="../assets/img/syougyou.png"
+              alt="商業施設"
+              width="720px"
+              height="436px"
+            />
+          </div>
+        </div>
+        <div class="naiyou-inner">
+          <div class="naiyou-tenpo">
+            <img
+              src="../assets/img/tategu.png"
+              alt="店舗施工"
+              width="720px"
+              height="436px"
+            />
+          </div>
+          <div class="naiyou-tategu">
+            <div class="naiyoutext-inner">
+              <div class="naiyou-font">
+                <font>あらゆる店舗内装工事に対応</font>
+              </div>
+              <h3>建具の設計、施工</h3>
+              <div class="naiyou-tategu-text">
+                ●●創社は建具の設計、施工を、臨機応変にお請けできるのが強みです。お客様の多種多様なご期待に沿えるよう、全力で対応いたします。
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section>
+      <div class="performance">
+        <h2>施工実績</h2>
+        <ul>
+          <router-link
+            :to="{ name: 'res' }"
+            tag="div"
+            style="cursor: hand; cursor: pointer"
+            >restaurant</router-link
+          >
+          <hr />
+          <router-link
+            :to="{ name: 'apa' }"
+            tag="div"
+            style="cursor: hand; cursor: pointer"
+            >apparel</router-link
+          >
+          <hr />
+          <router-link
+            :to="{ name: 'other' }"
+            tag="div"
+            style="cursor: hand; cursor: pointer"
+            >other</router-link
+          >
+          <hr />
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="overview">
+        <h2>会社概要</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>社名</th>
+              <td>株式会社●●創社</td>
+            </tr>
+            <tr>
+              <th>本社</th>
+              <td>
+                東京都●●区●●町
+                <br />
+                TEL 090-000-000 FAX 090-000-000
+              </td>
+            </tr>
+            <tr>
+              <th>創業</th>
+              <td>1962年</td>
+            </tr>
+            <tr>
+              <th>資本金</th>
+              <td>●●●万円</td>
+            </tr>
+            <tr>
+              <th>代表取締役</th>
+              <td>天早貴義</td>
+            </tr>
+            <tr>
+              <th>建設業者登録</th>
+              <td>東京都知事登録（は）第0000号</td>
+            </tr>
+            <tr>
+              <th>建設業者許可</th>
+              <td>国土交通大臣 許可 第0000号</td>
+            </tr>
+            <tr>
+              <th>営業種目</th>
+              <td>
+                1.商業、一級建築工事
+                <br />
+                2.上記の設計、デザイン
+                <br />
+                3.別注家具・造作木工事
+              </td>
+            </tr>
+            <br />
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <div class="access">
+        <h2>アクセス</h2>
+        <div class="access2">
+          <img
+            class="img"
+            src="../assets/img/kaisya.png"
+            title="会社"
+            height="600px"
+            width="1000px"
+          />
+          <div class="map">
+            <div class="text">
+              <h3>TOKYO OFFICE</h3>
+              <p>
+                〒000-000
+                <br />
+                東京都〇〇区〇〇町
+                <br />
+                TEL 000-0000
+                <br />
+                FAX 000-000
+              </p>
+              <button>googl map</button>
+            </div>
+            <GmapMap
+              :center="center"
+              :zoom="zoom"
+              ref="map"
+              style="height: 400px; width: 100%; margin: 0 0 0 50px"
+              @center_changed="onCenterCanged"
+            >
+              <GmapMarker
+                v-show="marker_center"
+                :position="marker_center"
+                :clickable="true"
+                :icon="icon_center"
+                :draggable="true"
+              ></GmapMarker>
+            </GmapMap>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -226,5 +300,29 @@ hr {
 }
 .text h3 {
   margin: 0 0 50px 0;
+}
+.naiyou-tenpo {
+  padding-left: 14px;
+}
+.naiyou-inner {
+  display: flex;
+  margin: 50px 0;
+}
+.naiyou-text {
+  text-indent: 0em;
+  padding-left: 7em;
+  padding-right: 4em;
+  letter-spacing: 0.1rem;
+}
+.naiyoutext-inner {
+  margin-top: 90px;
+}
+.naiyou-tategu {
+  margin-top: 45px;
+}
+.naiyou-tategu-text {
+  text-indent: 4em;
+  padding-left: 3em;
+  letter-spacing: 0.1rem;
 }
 </style>
