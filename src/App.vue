@@ -1,25 +1,47 @@
 <template>
   <div id="app">
     <nav class="ama">
-      <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
+      <router-link
+        id="ama"
+        :to="{
+          name: 'ama',
+        }"
+        tag="p"
+        style="cursor: hand; cursor: pointer"
         >〇〇創社</router-link
       >
       <ul class="menu">
-        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
+        <router-link
+          :to="{
+            name: 'contents',
+            hash: '#contents',
+          }"
           >施工内容</router-link
         >
-        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
+        <router-link
+          :to="{
+            name: 'performance',
+            hash: '#performance',
+          }"
           >施工実績</router-link
         >
-        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
+        <router-link
+          :to="{
+            name: 'overview',
+            hash: '#overview',
+          }"
           >会社概要</router-link
         >
-        <router-link to="/" tag="p" style="cursor: hand; cursor: pointer"
+        <router-link
+          :to="{
+            name: 'access',
+            hash: '#access',
+          }"
           >アクセス</router-link
         >
         <router-link
           :to="{ name: 'contact' }"
-          tag="p"
+          tag="div"
           style="cursor: hand; cursor: pointer"
           >お問合せ</router-link
         >
@@ -86,5 +108,9 @@ footer {
 .foot {
   margin: 0 auto;
   padding: 20px 0 10px 0;
+}
+a {
+  color: currentColor;
+  text-decoration: none;
 }
 </style>

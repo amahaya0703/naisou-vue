@@ -15,7 +15,27 @@ export default new router({
       path: "/",
       component: home,
       name: "ama",
+      children: [
+        {
+          path: "contents",
+          name: "contents",
+        },
+        {
+          path: "performance",
+          name: "performance",
+        },
+        {
+          path: "overview",
+          name: "overview",
+        },
+
+        {
+          path: "access",
+          name: "access",
+        },
+      ],
     },
+
     {
       path: "/restaurant",
       component: restaurant,
@@ -36,5 +56,19 @@ export default new router({
       component: contact,
       name: "contact",
     },
+    {
+      path: "*",
+      redirect: "/",
+    },
   ],
+
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+      };
+    } else {
+      return { x: 0, y: 0 };
+    }
+  },
 });
