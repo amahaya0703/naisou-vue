@@ -16,7 +16,17 @@
     </div>
     <section>
       <div class="naiyou">
-        <h2>施工内容</h2>
+        <div class="naiyou-link">
+          <router-link
+            id="contents"
+            :to="{
+              name: 'ama',
+              hash: '#ama',
+            }"
+          >
+            <h2>施工内容</h2>
+          </router-link>
+        </div>
         <div class="naiyou-inner">
           <div class="naiyou-tenpo">
             <img
@@ -84,10 +94,23 @@
     </section>
     <section>
       <div class="performance">
-        <h2>施工実績</h2>
+        <div class="jixtuseki-link">
+          <router-link
+            id="performance"
+            :to="{
+              name: 'ama',
+              hash: '#ama',
+            }"
+          >
+            <h2>施工実績</h2></router-link
+          >
+        </div>
         <ul>
           <router-link
-            :to="{ name: 'res' }"
+            :to="{
+              name: 'res',
+              hash: '#res',
+            }"
             tag="div"
             style="cursor: hand; cursor: pointer"
             >restaurant</router-link
@@ -112,7 +135,17 @@
     </section>
     <section>
       <div class="overview">
-        <h2>会社概要</h2>
+        <div class="gaiyou-link">
+          <router-link
+            id="overview"
+            :to="{
+              name: 'ama',
+              hash: '#ama',
+            }"
+          >
+            <h2>会社概要</h2>
+          </router-link>
+        </div>
         <table>
           <tbody>
             <tr>
@@ -164,7 +197,17 @@
     </section>
     <section>
       <div class="access">
-        <h2>アクセス</h2>
+        <div class="access-link">
+          <router-link
+            id="access"
+            :to="{
+              name: 'ama',
+              hash: '#ama',
+            }"
+          >
+            <h2>アクセス</h2>
+          </router-link>
+        </div>
         <div class="access2">
           <img
             class="img"
@@ -324,5 +367,13 @@ hr {
   text-indent: 4em;
   padding-left: 3em;
   letter-spacing: 0.1rem;
+}
+.naiyou-link {
+  text-decoration: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
 }
 </style>
