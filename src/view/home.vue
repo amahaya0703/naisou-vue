@@ -5,7 +5,7 @@
         src="../assets/img/naisou.png"
         title="内装"
         width="100%"
-        height="700px"
+        height="723px"
       />
       <span>
         <p>●●創社では、什器製造業から内装工事全般、</p>
@@ -28,7 +28,7 @@
           </router-link>
         </div>
         <div class="naiyou-inner">
-          <div class="naiyou-tenpo">
+          <div data-aos="fade-right" class="naiyou-tenpo">
             <img
               src="../assets/img/tenpo-sekou.png"
               alt="店舗施工"
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="naiyou-tenpo">
+          <div data-aos="fade-left" class="naiyou-tenpo">
             <img
               src="../assets/img/syougyou.png"
               alt="商業施設"
@@ -70,7 +70,7 @@
           </div>
         </div>
         <div class="naiyou-inner">
-          <div class="naiyou-tenpo">
+          <div data-aos="fade-right" class="naiyou-tenpo">
             <img
               src="../assets/img/tategu.png"
               alt="店舗施工"
@@ -131,6 +131,61 @@
           >
           <hr />
         </ul>
+      </div>
+      <div class="slide">
+        <div class="item">
+          <img src="../assets/img/eat11.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/other7.png" class="img-slide" />
+          <div class="introduction-img">
+            <div class="introduction-img-inner">
+              事業紹介
+            </div>
+            <p>心と体の元気プラザ</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../assets/img/eat3.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/eat4.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/other3.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/other2.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/other6.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/other1.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/other5.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/shp5.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/shp3.png" class="img-slide" />
+          <p>test</p>
+        </div>
+        <div class="item">
+          <img src="../assets/img/shp8.png" class="img-slide" />
+          <p>test</p>
+        </div>
       </div>
     </section>
     <section>
@@ -257,7 +312,7 @@ export default {
   data() {
     return {
       center: { lat: 35.71, lng: 139.72 },
-      zoom: 10,
+      zoom: 17,
       icon_center: {
         url: require("@/assets/img/icon.png"),
         size: { width: 100, height: 70, f: "px", b: "px" },
@@ -344,9 +399,10 @@ hr {
 .text h3 {
   margin: 0 0 50px 0;
 }
-.naiyou-tenpo {
-  padding-left: 14px;
+.naiyou {
+  margin-top: 23px;
 }
+
 .naiyou-inner {
   display: flex;
   margin: 50px 0;
@@ -365,7 +421,7 @@ hr {
 }
 .naiyou-tategu-text {
   text-indent: 4em;
-  padding-left: 3em;
+  padding-left: 4em;
   letter-spacing: 0.1rem;
 }
 .naiyou-link {
@@ -375,5 +431,38 @@ hr {
 a {
   color: currentColor;
   text-decoration: none;
+}
+.slide {
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+  overflow: auto;
+}
+.item {
+  scroll-snap-align: center;
+  display: inline-block;
+  white-space: normal;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin: 0 20px 50px 20px;
+}
+.img-slide {
+  width: 666px;
+  height: 444px;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+.introduction-img {
+  margin-left: 187px;
+}
+.introduction-img-inner {
+  float: left;
+  font-size: 12px;
+  height: 22px;
+  border: 1px solid #d3d3d3;
+  padding: 0 16px;
+  line-height: 22px;
+  color: black;
 }
 </style>
