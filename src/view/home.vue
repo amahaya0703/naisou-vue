@@ -6,6 +6,14 @@
         title="内装"
         width="100%"
         height="723px"
+        class="web"
+      />
+      <img
+        src="../assets/img/naisou2.png"
+        alt="内装"
+        width="100%"
+        height="560px"
+        class="mobile"
       />
       <span>
         <p>●●創社では、什器製造業から内装工事全般、</p>
@@ -14,7 +22,7 @@
         </p>
       </span>
     </div>
-    <section>
+    <section class="first">
       <div class="naiyou">
         <div class="naiyou-link">
           <router-link
@@ -28,12 +36,20 @@
           </router-link>
         </div>
         <div class="naiyou-inner">
-          <div data-aos="fade-right" class="naiyou-tenpo">
+          <div data-aos="fade-up" class="naiyou-tenpo">
             <img
               src="../assets/img/tenpo-sekou.png"
               alt="店舗施工"
               width="720px"
               height="436px"
+              class="web"
+            />
+            <img
+              src="../assets/img/tenpo-sekou.png"
+              alt="店舗施工"
+              width="320px"
+              height="236px"
+              class="mobile"
             />
           </div>
           <div class="naiyou-text">
@@ -49,33 +65,47 @@
           </div>
         </div>
         <div class="naiyou-inner">
-          <div class="naiyou-text">
-            <div class="naiyoutext-inner">
-              <div class="naiyou-font">
-                <font>あらゆる店舗内装工事に対応</font>
-              </div>
-              <h3>商業施設施工工事</h3>
-              <div class="naiyou-text">
-                ●●創社はあらゆる業種の商業施設施の施工、設計を、臨機応変にお請けでき、商業施設のリニューアルや業態の変更、部分的な改修や補修など、なんでもお任せください。お客様の多種多様なご期待に沿えるよう、全力で対応いたします。
-              </div>
+          <div class="naiyoutext-inner">
+            <div class="naiyou-font">
+              <font>あらゆる店舗内装工事に対応</font>
+            </div>
+            <h3>商業施設施工工事</h3>
+            <div class="naiyou-text">
+              ●●創社はあらゆる業種の商業施設施の施工、設計を、臨機応変にお請けでき、商業施設のリニューアルや業態の変更、部分的な改修や補修など、なんでもお任せください。お客様の多種多様なご期待に沿えるよう、全力で対応いたします。
             </div>
           </div>
-          <div data-aos="fade-left" class="naiyou-tenpo">
+          <div data-aos="fade-up" class="naiyou-tenpo">
             <img
               src="../assets/img/syougyou.png"
               alt="商業施設"
               width="720px"
               height="436px"
+              class="web"
+            />
+            <img
+              src="../assets/img/syougyou.png"
+              alt="商業施設"
+              width="320px"
+              height="236px"
+              class="mobile"
             />
           </div>
         </div>
         <div class="naiyou-inner">
-          <div data-aos="fade-right" class="naiyou-tenpo">
+          <div data-aos="fade-up" class="naiyou-tenpo">
             <img
               src="../assets/img/tategu.png"
               alt="店舗施工"
               width="720px"
               height="436px"
+              class="web"
+            />
+            <img
+              src="../assets/img/tategu.png"
+              alt="店舗施工"
+              width="320px"
+              height="236px"
+              class="mobile"
             />
           </div>
           <div class="naiyou-tategu">
@@ -84,7 +114,7 @@
                 <font>あらゆる店舗内装工事に対応</font>
               </div>
               <h3>建具の設計、施工</h3>
-              <div class="naiyou-tategu-text">
+              <div class="naiyou-text">
                 ●●創社は建具の設計、施工を、臨機応変にお請けできるのが強みです。お客様の多種多様なご期待に沿えるよう、全力で対応いたします。
               </div>
             </div>
@@ -265,16 +295,23 @@
         </div>
         <div class="access2">
           <img
-            class="img"
             src="../assets/img/kaisya.png"
             title="会社"
             height="600px"
             width="1000px"
+            class="web"
+          />
+          <img
+            src="../assets/img/kaisya.png"
+            title="会社"
+            width="100%"
+            height="360px"
+            class="mobile a"
           />
           <div class="map">
             <div class="text">
-              <h3>TOKYO OFFICE</h3>
-              <p>
+              <h3 class="office">TOKYO OFFICE</h3>
+              <p class="town">
                 〒000-000
                 <br />
                 東京都〇〇区〇〇町
@@ -289,7 +326,7 @@
               :center="center"
               :zoom="zoom"
               ref="map"
-              style="height: 400px; width: 100%; margin: 0 0 0 50px"
+              class="vue-map"
               @center_changed="onCenterCanged"
             >
               <GmapMarker
@@ -330,6 +367,9 @@ export default {
 </script>
 
 <style scoped>
+.mobile {
+  display: none;
+}
 .app {
   text-align: center;
 }
@@ -399,9 +439,6 @@ hr {
 .text h3 {
   margin: 0 0 50px 0;
 }
-.naiyou {
-  margin-top: 23px;
-}
 
 .naiyou-inner {
   display: flex;
@@ -444,7 +481,7 @@ a {
   background-color: #f4f4f4;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  margin: 0 20px 50px 20px;
+  margin: 0 30px 50px 20px;
 }
 .img-slide {
   width: 666px;
@@ -464,5 +501,88 @@ a {
   padding: 0 16px;
   line-height: 22px;
   color: black;
+}
+
+.vue-map {
+  height: 400px;
+  width: 100%;
+  margin: 0 0 0 50px;
+}
+
+@media screen and (max-width: 480px) {
+  .naiyou {
+    margin-top: 115px;
+  }
+  .naiyou-inner {
+    flex-direction: column;
+  }
+  .naiyou-text {
+    text-indent: 0em;
+    padding-left: 0em;
+    padding-right: 0em;
+    letter-spacing: 0.1rem;
+  }
+  .naiyoutext-inner {
+    margin-top: 90px;
+    padding: 0 40px;
+    order: 1;
+  }
+  .naiyou-link {
+    margin-top: -55px;
+    text-decoration: none;
+  }
+  .naisou {
+    height: 500px;
+  }
+  .mobile {
+    display: block;
+    margin: 0 auto;
+  }
+  .web {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    bottom: -35px;
+  }
+  .img-slide {
+    width: 333px;
+    height: 222px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+  }
+  .introduction-img {
+    margin-left: 20px;
+  }
+  table {
+    margin-right: 0px;
+    width: 333px;
+    margin-left: 14px;
+  }
+  .map {
+    margin: 0;
+    display: block;
+  }
+  .text {
+    margin: 0;
+    order: 1;
+    width: 360px;
+    padding-top: 0;
+  }
+  .vue-map {
+    height: 230px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .town {
+    margin: 7px;
+  }
+  .text h3 {
+    margin: 0;
+    padding-top: 10px;
+  }
 }
 </style>

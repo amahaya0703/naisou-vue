@@ -175,6 +175,7 @@ form {
 .labelName {
   text-indent: -12em;
   padding-left: 2em;
+  padding: 0;
 }
 .inputName {
   text-indent: -5em;
@@ -183,6 +184,7 @@ form {
 .labelEmail {
   text-indent: -13em;
   padding-left: 2em;
+  padding: 0;
 }
 .inputEmail {
   text-indent: -5em;
@@ -191,6 +193,7 @@ form {
 .labelCall {
   text-indent: -12em;
   padding-left: 2em;
+  padding: 0;
 }
 .inputCall {
   text-indent: -5em;
@@ -199,6 +202,7 @@ form {
 .labelContact {
   text-indent: -11em;
   padding-left: 2em;
+  padding: 0;
 }
 .inputContact {
   text-indent: -5em;
@@ -206,5 +210,13 @@ form {
 }
 .button {
   margin-top: 30px;
+}
+button {
+  margin-top: 15px;
+}
+@media screen and (max-width: 480px) {
+  form {
+    width: 360px;
+  }
 }
 </style>
