@@ -1,1 +1,7 @@
-@font-face{font-family:"M PLUS Rounded 1c";src:url("~@/assets/fonts/MPLUSRounded1c-Black.ttf") format("truetype")}
+@font-face {
+  font-family: "NotoSerif-ltalic";
+  src: url("~@/assets/fonts/NotoSerif-ltalic.ttf") format("truetype");
+
+  font-family: "MPLUSRounded1c-Black";
+  src: url("~@/assets/fonts/MPLUSRounded1c-Black.ttf") format("truetype");
+}

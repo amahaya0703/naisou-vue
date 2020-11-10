@@ -63,10 +63,10 @@
         >apparel</router-link
       >
       <router-link
-        :to="{ name: 'other' }"
+        :to="{ name: 'res' }"
         tag="p"
         style="cursor: hand; cursor: pointer"
-        >other</router-link
+        >restrant</router-link
       >
     </div>
   </div>

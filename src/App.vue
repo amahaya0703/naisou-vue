@@ -10,12 +10,13 @@
         style="cursor: hand; cursor: pointer"
         >〇〇創社</router-link
       >
-      <ul class="menu">
+      <div class="menu">
         <router-link
           :to="{
             name: 'contents',
             hash: '#contents',
           }"
+          class="btn"
           >施工内容</router-link
         >
         <router-link
@@ -23,6 +24,7 @@
             name: 'performance',
             hash: '#performance',
           }"
+          class="btn"
           >施工実績</router-link
         >
         <router-link
@@ -30,6 +32,7 @@
             name: 'overview',
             hash: '#overview',
           }"
+          class="btn"
           >会社概要</router-link
         >
         <router-link
@@ -37,15 +40,17 @@
             name: 'access',
             hash: '#access',
           }"
+          class="btn"
           >アクセス</router-link
         >
         <router-link
           :to="{ name: 'contact' }"
+          class="btn"
           tag="div"
           style="cursor: hand; cursor: pointer"
           >お問合せ</router-link
         >
-      </ul>
+      </div>
     </nav>
     <router-view></router-view>
     <footer>
@@ -72,9 +77,22 @@ export default {
 <style scoped>
 nav {
   background-color: #132743;
+  font-family: "NotoSerif-ltalic";
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  color: pink;
+  font-size: 20px;
 }
+.menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 60px;
+  padding: 0 10px 10px 0;
+}
+
 ul {
-  padding: 0 10px;
   display: flex;
   list-style: none;
 }
@@ -85,18 +103,12 @@ li {
   display: table;
   width: 100%;
 }
-.menu {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 0 60px;
-}
 #app {
-  font-family: "M PLUS Rounded 1c";
+  font-family: "NotoSerif-ltalic";
   -webkit-font-smoothing: antialiased;
   text-align: center;
-  color: pink;
+  color: black;
+  font-size: 20px;
 }
 
 footer {
@@ -112,5 +124,13 @@ footer {
 a {
   color: currentColor;
   text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  a {
+    color: currentColor;
+    text-decoration: none;
+    margin-right: 10px;
+    padding-right: 2px;
+  }
 }
 </style>

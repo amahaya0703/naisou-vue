@@ -320,7 +320,11 @@
                 <br />
                 FAX 000-000
               </p>
-              <button>googl map</button>
+              <button>
+                <a href="https://www.google.com/maps/@35.71,139.72,17z?hl=ja">
+                  Google Map
+                </a>
+              </button>
             </div>
             <GmapMap
               :center="center"
@@ -358,6 +362,11 @@ export default {
       marker_center: { lat: 35.71, lng: 139.72 },
     };
   },
+  mounted() {
+    this.$$refs.icon_center.$mapPromise.then(
+      (icon_center) => (this.icon_center = icon_center)
+    );
+  },
   methods: {
     onCenterCanged(center) {
       this.marker_center = { lat: center.lat(), lng: center.lng() };
@@ -371,7 +380,12 @@ export default {
   display: none;
 }
 .app {
+  font-family: "MPLUSRounded1c-Black";
+  -webkit-font-smoothing: antialiased;
   text-align: center;
+  color: pink;
+  font-size: 25px;
+  font-weight: bold;
 }
 .naisou {
   position: relative;
@@ -446,8 +460,8 @@ hr {
 }
 .naiyou-text {
   text-indent: 0em;
-  padding-left: 7em;
-  padding-right: 4em;
+  padding-left: 1em;
+  padding-right: 1em;
   letter-spacing: 0.1rem;
 }
 .naiyoutext-inner {
@@ -510,6 +524,13 @@ a {
 }
 
 @media screen and (max-width: 480px) {
+  .app {
+    font-family: "MPLUSRounded1c-Black";
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    color: pink;
+    font-size: 19px;
+  }
   .naiyou {
     margin-top: 115px;
   }
@@ -572,7 +593,7 @@ a {
     padding-top: 0;
   }
   .vue-map {
-    height: 230px;
+    height: 200px;
     width: 300px;
     margin: 0 auto;
     margin-top: 10px;
