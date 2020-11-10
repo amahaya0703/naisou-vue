@@ -73,16 +73,16 @@
     </ul>
     <div class="link">
       <router-link
-        :to="{ name: 'apa' }"
-        tag="p"
-        style="cursor: hand; cursor: pointer"
-        >apparel</router-link
-      >
-      <router-link
         :to="{ name: 'other' }"
         tag="p"
         style="cursor: hand; cursor: pointer"
         >other</router-link
+      >
+      <router-link
+        :to="{ name: 'apa' }"
+        tag="p"
+        style="cursor: hand; cursor: pointer"
+        >apparel</router-link
       >
     </div>
   </div>

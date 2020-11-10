@@ -57,10 +57,10 @@
     </ul>
     <div class="link">
       <router-link
-        :to="{ name: 'apa' }"
+        :to="{ name: 'res' }"
         tag="p"
         style="cursor: hand; cursor: pointer"
-        >apparel</router-link
+        >restrant</router-link
       >
       <router-link
         :to="{ name: 'other' }"

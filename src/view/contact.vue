@@ -208,15 +208,59 @@ form {
   text-indent: -5em;
   padding-left: 5em;
 }
-.button {
-  margin-top: 30px;
-}
+
 button {
   margin-top: 15px;
 }
 @media screen and (max-width: 480px) {
+  .inputCall {
+    padding-left: 100px;
+    width: 135px;
+  }
+  .inputContact {
+    width: 139px;
+    margin: 0 auto;
+  }
   form {
     width: 360px;
+  }
+  .name {
+    display: block;
+    margin-bottom: 50px;
+    padding-left: 3em;
+    width: 235px;
+  }
+  .labelName {
+    text-indent: 0em;
+  }
+
+  .email {
+    display: block;
+    margin-bottom: 50px;
+    padding-left: 3em;
+    width: 235px;
+  }
+  .labelEmail {
+    text-indent: 0em;
+  }
+
+  .call {
+    display: block;
+    margin-bottom: 50px;
+    padding-left: 3em;
+    width: 235px;
+  }
+  .labelCall {
+    text-indent: 0em;
+  }
+  .labelContact {
+    text-indent: 0em;
+  }
+  .contact {
+    display: block;
+    margin-bottom: 50px;
+    padding-left: 3em;
+    padding-left: 0px;
   }
 }
 </style>
