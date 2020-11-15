@@ -112,6 +112,7 @@ export default {
         .catch((error) => {
           console.log(error.response);
         });
+      window.alert("受付完了いたしました。");
     },
   },
 };

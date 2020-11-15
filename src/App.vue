@@ -125,6 +125,10 @@ a {
   color: currentColor;
   text-decoration: none;
 }
+.btn {
+  margin-right: 0px;
+  padding-right: 5px;
+}
 @media screen and (max-width: 480px) {
   a {
     color: currentColor;

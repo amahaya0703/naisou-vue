@@ -6,7 +6,7 @@
         title="内装"
         width="100%"
         height="723px"
-        class="web"
+        class="web-top"
       />
       <img
         src="../assets/img/naisou2.png"
@@ -21,6 +21,12 @@
           お客様の満足向上を深く追求し、低価格かつ高品質なサービスの提供を心がけております。
         </p>
       </span>
+      <div class="scroll-parent">
+        <a href="#" class="scroll">
+          <span></span>
+          <div class="arrow"></div>
+        </a>
+      </div>
     </div>
     <section class="first">
       <div class="naiyou">
@@ -80,7 +86,7 @@
               alt="商業施設"
               width="720px"
               height="436px"
-              class="web"
+              class="web web-right"
             />
             <img
               src="../assets/img/syougyou.png"
@@ -299,7 +305,7 @@
             title="会社"
             height="600px"
             width="1000px"
-            class="web"
+            class="web-access"
           />
           <img
             src="../assets/img/kaisya.png"
@@ -376,6 +382,12 @@ export default {
 </script>
 
 <style scoped>
+.web {
+  border-radius: 0 10px 10px 0;
+}
+.web-right {
+  border-radius: 10px 0 0 10px;
+}
 .mobile {
   display: none;
 }
@@ -387,9 +399,59 @@ export default {
   font-size: 25px;
   font-weight: bold;
 }
+h2 {
+  height: 100px;
+  background-color: #132743;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+/* ========================
+          top-view
+=========================== */
+
 .naisou {
   position: relative;
   height: 700px;
+}
+.scroll-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background-size: cover;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 112%;
+  width: 3em;
+  height: 1em;
+  cursor: pointer;
+  color: #f5f5f5;
+}
+
+.scroll > span {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: 25%;
+  left: 33%;
+  transform: translateY(0) rotate(-45deg);
+  border-left: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+p {
+  text-align: center;
 }
 span {
   position: absolute;
@@ -402,57 +464,9 @@ span {
   padding: 0;
 }
 
-p {
-  text-align: center;
-}
-main {
-  margin: 0 auto;
-  display: block;
-  height: 150px;
-  width: 660px;
-}
-h2 {
-  height: 100px;
-  background-color: #132743;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-table {
-  border-collapse: collapse;
-  margin: 70px auto;
-  width: 800px;
-}
-table td {
-  padding: 10px;
-}
-.tenpo {
-  margin: 40px 0 15px 0;
-}
-ul {
-  padding: 0;
-  margin: 50px 0;
-}
-hr {
-  width: 250px;
-}
-.map {
-  height: 400px;
-  margin: 30px 220px 30px 0;
-  display: flex;
-}
-.img {
-  margin: 30px 0 0 0;
-}
-.text {
-  margin: 0 0 0 400px;
-  padding-top: 30px;
-  width: 500px;
-}
-.text h3 {
-  margin: 0 0 50px 0;
-}
+/* ========================
+          施工内容
+=========================== */
 
 .naiyou-inner {
   display: flex;
@@ -479,10 +493,19 @@ hr {
   text-decoration: none;
 }
 
-a {
-  color: currentColor;
-  text-decoration: none;
+/* ========================
+          施工実績
+=========================== */
+
+ul {
+  padding: 0;
+  margin: 50px 0;
 }
+
+hr {
+  width: 250px;
+}
+
 .slide {
   scroll-snap-type: x mandatory;
   white-space: nowrap;
@@ -502,7 +525,7 @@ a {
   height: 444px;
   background-color: #f4f4f4;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
+  border-radius: 10px 10px 0 0;
 }
 .introduction-img {
   margin-left: 187px;
@@ -515,6 +538,39 @@ a {
   padding: 0 16px;
   line-height: 22px;
   color: black;
+}
+/* ========================
+          会社概要
+=========================== */
+
+table {
+  border-collapse: collapse;
+  margin: 70px auto;
+  width: 800px;
+}
+table td {
+  padding: 10px;
+}
+
+/* ========================
+          アクセス
+=========================== */
+
+.map {
+  height: 400px;
+  margin: 30px 220px 30px 0;
+  display: flex;
+}
+.img {
+  margin: 30px 0 0 0;
+}
+.text {
+  margin: 0 0 0 90px;
+  padding-top: 30px;
+  width: 500px;
+}
+h3 {
+  margin: 0 0 50px 0;
 }
 
 .vue-map {
@@ -559,7 +615,9 @@ a {
     display: block;
     margin: 0 auto;
   }
-  .web {
+  .web,
+  .web-top,
+  .web-access {
     display: none;
   }
 
